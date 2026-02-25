@@ -1,0 +1,184 @@
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+        "ecran ecran ecran ecran"
+        "ecran ecran ecran ecran"
+        "AC DEL percent divide"
+        "seven eight nine multi"
+        "four five six moins"
+        "one two three plus"
+        "zero zero point equal";
+    gap: 10px;
+}
+
+.zero {
+    grid-area: zero;
+}
+
+.one {
+    grid-area: one;
+}
+
+.two {
+    grid-area: two;
+}
+
+.three {
+    grid-area: three;
+}
+
+.four {
+    grid-area: four;
+}
+
+.five {
+    grid-area: five;
+}
+
+.six {
+    grid-area: six;
+}
+
+.seven {
+    grid-area: seven;
+}
+
+.eight {
+    grid-area: eight;
+}
+
+.nine {
+    grid-area: nine;
+}
+
+.add {
+    grid-area: plus;
+}
+
+.sub {
+    grid-area: moins;
+}
+
+.divide {
+    grid-area: divide;
+}
+
+.multiply {
+    grid-area: multi;
+}
+
+.dot {
+    grid-area: point;
+}
+
+.equal {
+    grid-area: equal;
+}
+
+.percent {
+    grid-area: percent;
+}
+
+.reset {
+    grid-area: AC;
+    border-radius: 15px;
+    background: #7e0808;
+    box-shadow: inset -30px 30px 61px #580606,
+        inset 30px -30px 61px #a40a0a;
+}
+
+.reset:hover {
+    background-color: rgb(151, 8, 8);
+}
+
+.delete {
+    grid-area: DEL;
+    border-radius: 15px;
+    background: #a88654;
+    box-shadow: inset -30px 30px 61px #765e3b,
+        inset 30px -30px 61px #daae6d;
+}
+
+
+.delete:hover {
+    background-color: rgb(109, 77, 29);
+}
+
+
+
+
+
+.screen-container {
+    grid-area: ecran;
+    background-color: rgba(97, 92, 82, 0.61);
+    border-radius: 5px;
+    color: antiquewhite;
+    overflow: hidden;
+}
+
+/*Animation pour secouer la touche quand on clique plusieurs fois sur un opérateur quel qu'il soit (on ne peux pas mettre deux opérateur de suite)erreur visuelle*/
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0) } /* Position initiale au début et à la fin de l'animation */
+    25% { transform: translateX(-5px) }/* 25% du temps, mouveemnt de 5px à gauche */
+    75% { transform: translateX(5px) }/* 75% du temps, mouvement de 5px à droite */
+}
+
+/* Utilise shake créé précédemment, dure 0.3s et ease: commence doucement accélère puis ralenti */
+.shake { animation: shake 0.3s ease; }
+
+
+
+
+
+
+
+button {
+    border-radius: 15px;
+    background: #f7f7e2;
+    box-shadow: inset -13px 13px 46px #adad9e,
+        inset 13px -13px 46px #ffffff;
+    margin: 5px 0;
+    padding: 10px;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: rgb(207, 207, 109);
+}
+
+button:active {
+    transform: scale(0.8);
+}
+
+
+
+.large-text::-webkit-scrollbar{
+    height: 6px;
+}
+
+.small-text::-webkit-scrollbar{
+    width: 4px;
+}
+
+.large-text::-webkit-scrollbar-track,
+.small-text::-webkit-scrollbar-track {
+    background: transparent; /* Fond invisible */
+}
+
+.large-text::-webkit-scrollbar-thumb,
+.small-text::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2); /* Barre semi-transparente */
+    border-radius: 10px;
+}
+
+.large-text::-webkit-scrollbar-thumb:hover,
+.small-text::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4); /* Plus visible au survol */
+}
+
+
+/* 
+666665555555555555555555-55555+22222222111444444444477777774444444111111111856985
+ */
