@@ -19,14 +19,12 @@ Calculatrice responsive developpé en TypeScript, HTML et CSS
 ## Structure du projet 
 ```
 calculator/
-    index.html
-    tailwind.config.js
-    tsconfig.json
     css/
         style.css
     JS/
         script.js
         script.ts
+    index.html
 ```
 ## Lancer le projet
 
