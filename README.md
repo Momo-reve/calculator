@@ -1,5 +1,5 @@
 # calculator
-Calculatrice responsive developpé en TypeScript, HTML et CSS
+Calculatrice responsive developpée en TypeScript, HTML et CSS
 
 ## Technologies utilisées :
 
